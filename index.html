@@ -16,47 +16,58 @@
 <body class="bg-light">
     <main>
         <section class="container">
-            <h1 class="text-center mt-5">Book Archive </h1>
-            <hr class="w-50 mx-auto">
-        </section>
+            <h1 class="text-center mt-5 ">Book Archive </h1>
+            <hr class="w-50 mx-auto ">
 
-        <section class="container">
+
+
             <div class="input-group mb-3 w-50 mx-auto">
-                <input id="search-field" type="text" class="form-control ps-3 p-3" placeholder="Book/ Author"
-                    aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button onclick="searchKey()" id="search-button" class="btn btn-outline-secondary px-3"
-                    type="button">search</button>
+                <input id="search-field" type="text" class="form-control ps-3 p-3 shadow"
+                    placeholder="Book/ Author/ Publishers/ Publishing Year" aria-label="Recipient's username"
+                    aria-describedby="button-addon2">
+                <button onclick="searchKey()" id="search-button"
+                    class="btn btn-outline-secondary bg-danger text-light px-3 shadow" type="button">search</button>
+            </div>
+        </section>
+        <section class="container w-50 mt-3 my-3 text-center  ">
+
+            <!-- error message -->
+            <div>
+                <h3 id="error-msg" class="text-danger"></h3>
             </div>
 
-            <!-- error message & total book result -->
 
-            <section class="container w-50 mt-3 my-3 text-center  ">
-                <!-- book search total result -->
-                <div id="bookFound">
-                    <h3 id="total-result" class="">Books with same keyword found: </h3>
-                    <h3 id="error-msg" class="text-danger">Something went wrong! Please try again later...</h3>
-                    <h3 id="empty-input" class="text-danger">Please enter something to search</h3>
+            <!-- books matched total result -->
+            <div>
+                <h3 id="book-found" class="text-success"></h3>
+            </div>
+            <div>
+                <h3 id="empty-input" class="text-danger">
+                    <h3>
+            </div>
+            <!-- spinner -->
+            <div id="spinner" style="display: none;">
+                <div class="d-flex justify-content-center">
+                    <div class="spinner-border text-success" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
                 </div>
+            </div>
 
-            </section>
+        </section>
 
-            <section class="container w-75 my-3">
+        <section class="container w-75 my-3">
 
-                <!-- book search result -->
+            <!-- book search result -->
 
-                <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4 ">
+            <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4 ">
 
+            </div>
+            </div>
 
-
-                </div>
-                </div>
-
-            </section>
+        </section>
 
     </main>
-
-
-
 
 
 
